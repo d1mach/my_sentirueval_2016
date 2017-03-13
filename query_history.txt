@@ -1,0 +1,466 @@
+-- Executing query:
+select count(*) from bank_train_2016 where 
+ERROR:  syntax error at end of input
+LINE 1: select count(*) from bank_train_2016 where 
+                                                   ^
+
+********** Error **********
+
+ERROR: syntax error at end of input
+SQL state: 42601
+Character: 44
+
+-- Executing query:
+select count(*) from bank_train_2016 where text like '%http:%'
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where text like '%http://%'
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where text like '%http://t.co%'
+Total query runtime: 23 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=-1 and has_link=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=1 and has_link=true;
+Total query runtime: 13 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=0 and has_link=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=0 and has_link=true;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=1 and has_link=true;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=-1 and has_link=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=-1 and has_link=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where text like 'RT%';
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+alter table bank_train_2016
+  add column is_retweet boolean;
+Query returned successfully with no result in 91 ms.
+
+-- Executing query:
+update bank_train_2016
+  set is_retweet=true where text like 'RT %';
+Query returned successfully: 1057 rows affected, 228 ms execution time.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=0 and is_retweet=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=1 and is_retweet=true;
+Total query runtime: 3 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=-1 and is_retweet=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=-1 and is_retweet=true;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=1 and is_retweet=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=0 and is_retweet=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+alter table bank_train_2016
+  add column is_retweet boolean
+  add column has_link boolean;
+ERROR:  syntax error at or near "add"
+LINE 3:   add column has_link boolean;
+          ^
+
+********** Error **********
+
+ERROR: syntax error at or near "add"
+SQL state: 42601
+Character: 63
+
+-- Executing query:
+alter table bank_train_2016
+  add column is_retweet boolean,
+  add column has_link boolean;
+Query returned successfully with no result in 141 ms.
+
+-- Executing query:
+update bank_train_2016
+  set is_retweet=true where text like 'RT %';
+Query returned successfully: 1057 rows affected, 142 ms execution time.
+
+-- Executing query:
+update bank_train_2016
+  set has_link=true where text like '%http://%';
+Query returned successfully: 6534 rows affected, 525 ms execution time.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=0 and is_retweet=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=-1 and is_retweet=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=1 and is_retweet=true;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=1 and is_retweet=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=0 and is_retweet=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=-1 and is_retweet=true;
+Total query runtime: 2 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=-1 and has_link=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=1 and has_link=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where vtb=0 and has_link=true;
+Total query runtime: 14 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=0 and has_link=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=-1 and has_link=true;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where sberbank=1 and has_link=true;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select * where text like 'Райффайзенбанк только победил в звании худший интернет банк на свете%'
+ERROR:  SELECT * with no tables specified is not valid
+LINE 1: select * where text like 'Райффайзенбанк только победил в зв...
+               ^
+********** Error **********
+
+ERROR: SELECT * with no tables specified is not valid
+SQL state: 42601
+Character: 8
+
+-- Executing query:
+select * from bank_train_2016 where text like 'Райффайзенбанк только победил в звании худший интернет банк на свете%';
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select * from bank_train_2016 where text like '%((%';
+Total query runtime: 11 ms.
+14 rows retrieved.
+
+-- Executing query:
+select * from bank_train_2016 where text like '%))%';
+Total query runtime: 13 ms.
+46 rows retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where has_link;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=1 or vtb=1 or gazprom=1 or alfabank=1 or bankmoskvy=1 or uralsib=1 or raiffeisen=1 or rshb=1);
+Total query runtime: 122 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=-1 or vtb=-1 or gazprom=-1 or alfabank=-1 or bankmoskvy=-1 or uralsib=-1 or raiffeisen=-1 or rshb=-1);
+Total query runtime: 21 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=-1 or vtb=-1 or gazprom=-1 or alfabank=-1 or bankmoskvy=-1 or uralsib=-1 or raiffeisen=-1 or rshb=-1)
+and (sberbank=1 or vtb=1 or gazprom=1 or alfabank=1 or bankmoskvy=1 or uralsib=1 or raiffeisen=1 or rshb=1);
+Total query runtime: 6 ms.
+1 row retrieved.
+
+-- Executing query:
+select * from bank_train_2016 where (sberbank=-1 or vtb=-1 or gazprom=-1 or alfabank=-1 or bankmoskvy=-1 or uralsib=-1 or raiffeisen=-1 or rshb=-1)
+and (sberbank=1 or vtb=1 or gazprom=1 or alfabank=1 or bankmoskvy=1 or uralsib=1 or raiffeisen=1 or rshb=1);
+Total query runtime: 11 ms.
+2 rows retrieved.
+
+-- Executing query:
+select * from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0)
+and (sberbank=1 or vtb=1 or gazprom=1 or alfabank=1 or bankmoskvy=1 or uralsib=1 or raiffeisen=1 or rshb=1);
+Total query runtime: 11 ms.
+2 rows retrieved.
+
+-- Executing query:
+select * from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0)
+and (sberbank=-1 or vtb=-1 or gazprom=-1 or alfabank=-1 or bankmoskvy=-1 or uralsib=-1 or raiffeisen=-1 or rshb=-1);
+Total query runtime: 11 ms.
+19 rows retrieved.
+
+-- Executing query:
+select * from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0);
+Total query runtime: 927 ms.
+6977 rows retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0);
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where has_link and not is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where has_link;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where has_link and not is_retweet;
+Total query runtime: 3 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where has_link and (not is_retweet);
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select * from bank_train_2016 where has_link and (not is_retweet);
+Total query runtime: 12 ms.
+0 rows retrieved.
+
+-- Executing query:
+update bank_train_2016 set is_retweet=false where not is_retweet;
+Query returned successfully: 0 rows affected, 11 ms execution time.
+
+-- Executing query:
+update bank_train_2016 set is_retweet=false where is_retweet is null;
+Query returned successfully: 8335 rows affected, 335 ms execution time.
+
+-- Executing query:
+update bank_train_2016 set has_link=false where has_link is null;
+Query returned successfully: 2858 rows affected, 889 ms execution time.
+
+-- Executing query:
+select count(*) from bank_train_2016 where has_link and not is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0)
+and has_link and not is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=1 or vtb=1 or gazprom=1 or alfabank=1 or bankmoskvy=1 or uralsib=1 or raiffeisen=1 or rshb=1)
+and has_link and not is_retweet;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=-1 or vtb=-1 or gazprom=-1 or alfabank=-1 or bankmoskvy=-1 or uralsib=-1 or raiffeisen=-1 or rshb=-1)
+and has_link and not is_retweet;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=-1 or vtb=-1 or gazprom=-1 or alfabank=-1 or bankmoskvy=-1 or uralsib=-1 or raiffeisen=-1 or rshb=-1)
+and not has_link and is_retweet;
+Total query runtime: 3 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=1 or vtb=1 or gazprom=1 or alfabank=1 or bankmoskvy=1 or uralsib=1 or raiffeisen=1 or rshb=1)
+and not has_link and is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0)
+and not has_link and is_retweet;
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where has_link and not is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0)
+and not has_link and is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where has_link and not is_retweet;
+Total query runtime: 3 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0)
+and not has_link and is_retweet;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0);
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0) and not has_link;
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=0 or vtb=0 or gazprom=0 or alfabank=0 or bankmoskvy=0 or uralsib=0 or raiffeisen=0 or rshb=0) and (not has_link or is_retweet);
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=-1 or vtb=-1 or gazprom=-1 or alfabank=-1 or bankmoskvy=-1 or uralsib=-1 or raiffeisen=-1 or rshb=-1)
+and (not has_link or is_retweet);
+Total query runtime: 12 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where (sberbank=1 or vtb=1 or gazprom=1 or alfabank=1 or bankmoskvy=1 or uralsib=1 or raiffeisen=1 or rshb=1)
+and (not has_link or is_retweet);
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) where to_tsvector('russian',text) @@ to_tsquery('Сбер')
+ERROR:  column "text" does not exist
+LINE 1: select count(*) where to_tsvector('russian',text) @@ to_tsqu...
+                                                    ^
+
+********** Error **********
+
+ERROR: column "text" does not exist
+SQL state: 42703
+Character: 45
+
+-- Executing query:
+select count(*) from bank_train_2016 where to_tsvector('russian',text) @@ to_tsquery('Сбер')
+Total query runtime: 880 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where to_tsvector('russian',text) @@ to_tsquery('Сбербанк')
+Total query runtime: 172 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where to_tsvector('russian',text) @@ to_tsquery('Уралсиб')
+Total query runtime: 174 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where to_tsvector('russian',text) @@ to_tsquery('ВТБ')
+Total query runtime: 163 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where to_tsvector('russian',text) @@ to_tsquery('убыток')
+Total query runtime: 172 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where to_tsvector('russian',text) @@ to_tsquery('убытки')
+Total query runtime: 162 ms.
+1 row retrieved.
+
+-- Executing query:
+select count(*) from bank_train_2016 where to_tsvector('russian',text) @@ to_tsquery('убытк')
+Total query runtime: 171 ms.
+1 row retrieved.
+
+-- Executing query:
+select to_tsquery('russian','собака');
+Total query runtime: 11 ms.
+1 row retrieved.
+
+-- Executing query:
+select to_tsquery('russian','убыток');
+Total query runtime: 11 ms.
+1 row retrieved.
+
